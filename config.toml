@@ -10,14 +10,10 @@ title = 'Eric Shim'
     name = "Projects"
     url = "/projects/"
     weight = 2
-[[menu.links]]
-    name = "Blog"
-    url = "/Blog/"
-    weight = 3
-[[menu.links]]
-    name = "Experiences"
-    url = "/experiences/"
-    weight = 4
+# [[menu.links]]
+#     name = "Blog"
+#     url = "/Blog/"
+#     weight = 3
 
 [[params.socials]]
     name = "Email"
