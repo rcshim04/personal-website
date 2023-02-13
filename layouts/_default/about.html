@@ -1,0 +1,44 @@
+{{ define "main" }}{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $scss := resources.Get "styles/about.scss" }}
+{{ $styles := $scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+
+{{ $content_parts := split .Content "||||||||||" }}
+<style>
+    nav #about {
+        box-shadow: inset 0 -2px 0 var(--primary-color);
+    }
+</style>
+
+<div class="container">
+    <div class="banner">
+        <div class="photo"></div>
+        <div class="content">
+            <h1>{{ .Title }}</h1>
+            {{ index $content_parts 0 | safeHTML }}
+        </div>
+    </div>
+    <div class="about">
+        <div class="skills">
+            <h2>What can I do?</h2>
+            <div class="lists">
+                <div>
+                    {{ index $content_parts 1 | safeHTML }}
+                </div>
+                <div>
+                    {{ index $content_parts 2 | safeHTML }}
+                </div>
+            </div>
+        </div>
+        <div class="facts">
+            <h2>Random facts</h2>
+            <div class="lists">
+                <div class="list">
+                    {{ index $content_parts 3 | safeHTML }}
+                </div>
+                <div class="photo"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
