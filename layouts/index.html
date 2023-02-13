@@ -1,3 +1,33 @@
 {{ define "main" }}
-<h1>HELLO WORLD</h1>
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $scss := resources.Get "styles/index.scss" }}
+{{ $styles := $scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ $typewriter := resources.Get "scripts/typewriter.js" }}
+{{ $js := $typewriter | minify | fingerprint | resources.PostProcess }}
+<script src="{{ $js.RelPermalink }}"></script>
+
+<div class="container">
+    <div class="mast">
+        <h1>Hello, I'm Eric</h1>
+        <div class="description-text-group">
+            <span class="description-text" id="description-text-0">a web developer.</span>
+            <span class="description-text" id="description-text-1">a web designer.</span>
+            <span class="description-text" id="description-text-2">a programmer.</span>
+            <span class="description-text" id="description-text-3">an aspiring artist.</span>
+            <span class="description-text" id="description-text-4">a music enthusiast.</span>
+        </div>
+        <div class="description">
+            <span>I'm </span><span class="animated-text"></span>
+        </div>
+        <div class="buttons">
+            <a href="/about/" class="more-button">More About Me</a>
+            <div class="social-buttons">
+                {{ range .Site.Params.socials }}
+                <a href="{{ .url }}" target="_blank"><img src="{{ .icon }}" alt="{{ .name }}"></a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
 {{ end }}

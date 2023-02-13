@@ -1,3 +1,46 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Eric Shim'
+
+[[menu.links]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+[[menu.links]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+[[menu.links]]
+    name = "Blog"
+    url = "/Blog/"
+    weight = 3
+[[menu.links]]
+    name = "Experiences"
+    url = "/experiences/"
+    weight = 4
+
+[[params.socials]]
+    name = "Email"
+    icon = "/email.svg"
+    url = "mailto:eshim@uwaterloo.ca"
+    weight = 1
+[[params.socials]]
+    name = "LinkedIn"
+    icon = "/linkedin2.svg"
+    url = "https://www.linkedin.com/in/ericjshim/"
+    weight = 2
+[[params.socials]]
+    name = "Github"
+    icon = "/github.svg"
+    url = "https://github.com/rcshim04"
+    weight = 3
+[[params.socials]]
+    name = "Twitter"
+    icon = "/twitter.svg"
+    url = "https://twitter.com/reishicm"
+    weight = 4
+[[params.socials]]
+    name = "Instagram"
+    icon = "/instagram.svg"
+    url = "https://www.instagram.com/reishi.04/"
+    weight = 5

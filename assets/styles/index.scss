@@ -1,0 +1,37 @@
+@mixin filter($filter-type, $filter-amount) {
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+.container {
+    .mast {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 40rem;
+        h1 {
+            color: var(--text-color);
+            font-size: 5rem;
+            font-weight: 500;
+        }
+        .description-text-group {
+            display: none;
+        }
+        .description {
+            color: var(--alternate-color);
+            font-size: 1.8rem;
+            font-weight: 400;
+            .animated-text {
+                color: var(--primary-color);
+            }
+        }
+    }
+    .buttons {
+        .social-buttons {
+            img {
+                margin-right: 1rem;
+                height: 2rem;
+                @include filter(invert, var(--invert-filter));
+            }
+        }
+    }
+}
