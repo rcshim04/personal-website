@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ hugo.Generator }}
-    <title>{{ .Title }}</title>
+    {{ if eq (.Title | lower) "404 page not found" }}
+    <title>Page not found • {{ .Site.Title | title }}</title>
+    {{ else if eq .Site.Title .Title }}
+    <title>{{ .Title | title }}</title>
+    {{ else }}
+    <title>{{ .Title | title }} • {{ .Site.Title | title }}</title>
+    {{ end }}
 
     {{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
     {{ $scss := resources.Get "styles/base.scss" }}
