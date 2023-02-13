@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/rcshim04/website/issues"
   },
-  "homepage": "https://github.com/rcshim04/website#readme"
+  "homepage": "https://github.com/rcshim04/website#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0"
+  }
 }
