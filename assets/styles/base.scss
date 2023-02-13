@@ -41,7 +41,7 @@ header {
     justify-content: center;
     nav {
         width: var(--site-width);
-        position: fixed;
+        position: absolute;
         display: flex;
         justify-self: center;
         justify-content: space-between;
@@ -94,7 +94,7 @@ header {
         }
     }
     .switch {
-        position: fixed;
+        position: absolute;
         display: flex;
         align-items: center;
         top: 3rem;
