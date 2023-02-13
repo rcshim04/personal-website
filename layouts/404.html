@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $scss := resources.Get "styles/404.scss" }}
+{{ $styles := $scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+
+<div class="container">
+    <h1>Oops!</h1>
+    <h3>404 - Page Not Found</h3>
+    <span>The page you are looking for may have been removed, had its name changed, or is temporary unavailable.</span>
+    <a href="/" class="more-button">Back to Homepage</a>
+</div>
+{{ end }}
