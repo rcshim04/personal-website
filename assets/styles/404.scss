@@ -1,3 +1,5 @@
+@import "_include-media";
+
 .container {
     text-align: center;
     h1 {
@@ -13,5 +15,15 @@
         font-size: 1rem;
         color: var(--alternate-color);
         margin-top: 1rem;
+    }
+}
+@include media(">phone", "<desktop") {
+    .container {
+        h1 {
+            font-size: 5rem;
+        }
+        h3 {
+            font-size: 1.8rem;
+        }
     }
 }

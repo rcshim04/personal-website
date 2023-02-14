@@ -7,14 +7,17 @@
                 </g>
             </svg>
         </a>
-        <div>
-            <ul class="links">
-                {{ range .Site.Menus.links }}
-                <li>
-                    <a id="{{ .Name | lower }}" href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-            </ul>
+        <ul class="links">
+            {{ range .Site.Menus.links }}
+            <li class="{{ .Name | lower }}">
+                <a href="{{ .URL }}">{{ .Name | title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        <div class="mobile-toggle">
+            <span class="material-icons hidden">menu</span>
+            <a class="hamburger-menu active"><span class="material-icons">menu</span></a>
+            <a class="close-menu"><span class="material-icons">close</span></a>
         </div>
     </nav>
     <div class="switch">
@@ -24,3 +27,46 @@
         </label>
     </div>
 </header>
+<div class="mobile-nav">
+    <ul class="mobile-links">
+        {{ range .Site.Menus.links }}
+        <li class="{{ .Name | lower }}">
+            <a href="{{ .URL }}">{{ .Name | title }}</a>
+        </li>
+        <hr>
+        {{ end }}
+        <li class="displaymode">
+            <a class="dropdown-trigger-mobile" id="displaymode-trigger-mobile">
+                Display Mode
+                <span class="material-icons">chevron_right</span>
+            </a>
+            <ul class="dropdown-content-mobile" id="displaymode-dropdown-mobile">
+                <li class="dropdown-back-mobile" id="displaymode-dropdown-back-mobile">
+                    <a>
+                        <span class="material-icons">chevron_left</span>
+                        Back to Menu
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <form id="mobile-theme-toggle">
+                        <div>
+                            <input type="radio" id="system" name="display-mode" value="system">
+                            <label for="system">System Settings</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="light" name="display-mode" value="light">
+                            <label for="light">Light Mode</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="dark" name="display-mode" value="dark">
+                            <label for="dark">Dark Mode</label>
+                        </div>
+                    </form>
+                </li>
+                <hr>
+            </ul>
+        </li>
+        <hr>
+    </ul>
+</div>

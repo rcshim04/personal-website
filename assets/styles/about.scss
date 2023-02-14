@@ -1,3 +1,5 @@
+@import "_include-media";
+
 .container {
     .banner {
         display: flex;
@@ -79,6 +81,64 @@
         .facts {
             .list {
                 width: 40% !important;
+            }
+        }
+    }
+}
+@include media(">phone", "<desktop") {
+    .container {
+        .banner {
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 100%;
+            .photo {
+                width: 100%;
+            }
+            .content {
+                width: 100%;
+                text-align: center;
+                h1 {
+                    font-size: 2.6rem;
+                }
+                .intro {
+                    font-size: 1.2rem;
+                }
+                .description {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .about {
+            text-align: center;
+            h2 {
+                font-size: 1.8rem;
+                margin-top: 2.6rem;
+            }
+            li {
+                line-height: 2.4rem;
+            }
+            .skills, .facts {
+                .lists {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    div {
+                        width: 100% !important;
+                        text-align: left;
+                        .list {
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 1rem;
+                            width: 100% !important;
+                            ul {
+                                width: 100%;
+                            }
+                        }
+                        .photo {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }

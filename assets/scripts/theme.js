@@ -1,5 +1,9 @@
 $(document).ready(() => {
     let stored_theme = localStorage.getItem("theme");
+    $(`#mobile-theme-toggle > div > input[value=${stored_theme}]`).prop("checked", true);
+    if(stored_theme === "system") {
+        stored_theme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    }
     let target_theme = "light";
     if(stored_theme === "light") {
         target_theme = "dark";
@@ -17,6 +21,17 @@ $(document).ready(() => {
         }
         $(":root").attr("data-theme", target_theme);
         $("#theme-toggle").prop("checked", target_theme === "light");
+        localStorage.setItem("theme", target_theme);
+    });
+    $("#mobile-theme-toggle > div > input").change(() => {
+        let target_theme = $("#mobile-theme-toggle > div > input:checked").val();
+        console.log(target_theme);
+        if(target_theme === "system") {
+            $(":root").attr("data-theme", (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+        } else {
+            $(":root").attr("data-theme", target_theme);
+        }
+        $("#mobile-theme-toggle > div > input:checked").prop("checked", true);
         localStorage.setItem("theme", target_theme);
     });
     setTimeout(() => {
