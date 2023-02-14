@@ -1,6 +1,6 @@
 $(document).ready(() => {
     let stored_theme = localStorage.getItem("theme") || "system";
-    $(`#mobile-theme-toggle > div > input[value=${stored_theme}]`).prop("checked", true);
+    $(`#mobile-theme-toggle > div > input[value="${stored_theme}"]`).prop("checked", true);
     if(stored_theme === "system") {
         stored_theme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     }
@@ -21,12 +21,13 @@ $(document).ready(() => {
         }
         $(":root").attr("data-theme", target_theme);
         $("#theme-toggle").prop("checked", target_theme === "light");
-        $(`#mobile-theme-toggle > div > input[value=${target_theme}]`).prop("checked", true);
+        $(`#mobile-theme-toggle > div > input[value="${target_theme}"]`).prop("checked", true);
         localStorage.setItem("theme", target_theme);
     });
     $("#mobile-theme-toggle > div > input").change(() => {
         let target_theme = $("#mobile-theme-toggle > div > input:checked").val();
         console.log(target_theme);
+        localStorage.setItem("theme", target_theme);
         if(target_theme === "system") {
             target_theme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
             $(":root").attr("data-theme", target_theme);
@@ -35,14 +36,13 @@ $(document).ready(() => {
         }
         $("#theme-toggle").prop("checked", target_theme === "light");
         $("#mobile-theme-toggle > div > input:checked").prop("checked", true);
-        localStorage.setItem("theme", target_theme);
     });
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
         let stored_theme = localStorage.getItem("theme") || "system";
         if(stored_theme === "system") {
             stored_theme = (event.matches ? "dark" : "light");
             $("#theme-toggle").prop("checked", stored_theme === "light");
-            $(`#mobile-theme-toggle > div > input[value=system]`).prop("checked", true);
+            $(`#mobile-theme-toggle > div > input[value="system"]`).prop("checked", true);
         }
     });
     setTimeout(() => {
