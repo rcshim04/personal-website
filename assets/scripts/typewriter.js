@@ -1,11 +1,11 @@
 $(document).ready(() => {
-    let count = $(".mast > .description-text-group > .description-text").length;
+    let count = $(".intro > .description-text-group > .description-text").length;
 
     let i = 0, j = 0, tick = 0;
     let pause = 0, state = 0;
     let typewriter = setInterval(() => {
         if(state == 0) {
-            let description = $(`.mast > .description-text-group > #description-text-${i}`).text();
+            let description = $(`.intro > .description-text-group > #description-text-${i}`).text();
             $(".description > .animated-text").text(description.substring(0, j) + "|");
             if(tick % 2 == 0){
                 j++;
@@ -17,7 +17,7 @@ $(document).ready(() => {
         } else if(state == 1 && tick == pause) {
             state = 2;
         } else if(state == 2) {
-            let description = $(`.mast > .description-text-group > #description-text-${i}`).text();
+            let description = $(`.intro > .description-text-group > #description-text-${i}`).text();
             $(".description > .animated-text").text(description.substring(0, j) + "|");
             j--;
             if(j == -1) {
