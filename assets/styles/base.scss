@@ -54,6 +54,8 @@ header {
     height: 9.4rem;
     display: flex;
     justify-content: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     nav {
         width: var(--site-width);
         position: absolute;
@@ -186,10 +188,8 @@ header {
     justify-content: space-between;
     z-index: 8;
     background-color: var(--secondary-bg-color);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
     top: 0;
     left: 100%;
     padding: 1.6rem;
