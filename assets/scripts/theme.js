@@ -28,10 +28,12 @@ $(document).ready(() => {
         let target_theme = $("#mobile-theme-toggle > div > input:checked").val();
         console.log(target_theme);
         if(target_theme === "system") {
-            $(":root").attr("data-theme", (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+            target_theme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+            $(":root").attr("data-theme", target_theme);
         } else {
             $(":root").attr("data-theme", target_theme);
         }
+        $("#theme-toggle").prop("checked", target_theme === "light");
         $("#mobile-theme-toggle > div > input:checked").prop("checked", true);
         localStorage.setItem("theme", target_theme);
     });
