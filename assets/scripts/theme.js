@@ -21,6 +21,7 @@ $(document).ready(() => {
         }
         $(":root").attr("data-theme", target_theme);
         $("#theme-toggle").prop("checked", target_theme === "light");
+        $(`#mobile-theme-toggle > div > input[value=${target_theme}]`).prop("checked", true);
         localStorage.setItem("theme", target_theme);
     });
     $("#mobile-theme-toggle > div > input").change(() => {
@@ -33,6 +34,14 @@ $(document).ready(() => {
         }
         $("#mobile-theme-toggle > div > input:checked").prop("checked", true);
         localStorage.setItem("theme", target_theme);
+    });
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        let stored_theme = localStorage.getItem("theme") || "system";
+        if(stored_theme === "system") {
+            stored_theme = (event.matches ? "dark" : "light");
+            $("#theme-toggle").prop("checked", stored_theme === "light");
+            $(`#mobile-theme-toggle > div > input[value=${stored_theme}]`).prop("checked", true);
+        }
     });
     setTimeout(() => {
         $("#theme-style").html("* { transition: color 0.2s linear, background-color 0.2s linear, color 0.2s linear, fill 0.2s linear, filter 0.2s linear; }");
