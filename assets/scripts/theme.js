@@ -43,6 +43,7 @@ $(document).ready(() => {
             stored_theme = (event.matches ? "dark" : "light");
             $("#theme-toggle").prop("checked", stored_theme === "light");
             $(`#mobile-theme-toggle > div > input[value="system"]`).prop("checked", true);
+            $(":root").attr("data-theme", stored_theme);
         }
     });
     setTimeout(() => {
