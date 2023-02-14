@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    let stored_theme = localStorage.getItem("theme");
+    let stored_theme = localStorage.getItem("theme") || "system";
     $(`#mobile-theme-toggle > div > input[value=${stored_theme}]`).prop("checked", true);
     if(stored_theme === "system") {
         stored_theme = (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
