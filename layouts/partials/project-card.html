@@ -1,0 +1,24 @@
+<div class="card">
+    <a href="">
+        <img class="thumbnail" src="{{ .Params.thumbnail }}" alt="{{ .Title }}">
+    </a>
+    <div class="info">
+        <h3 class="title">
+            {{ .Title }}
+            {{ if .Params.archived }}
+            <span class="material-icons archive" title="Archived">archive</span>
+            {{ end }}
+        </h3>
+        <p class="desc">{{ .Description }}</p>
+        <div class="tags">
+            {{ range .Params.tags }}
+                <span class="tag" data-tag="{{ . }}">{{ . }}</span>
+            {{ end }}
+        </div>
+        <div class="links">
+            {{ range (where (sort .Params.links "weight") "link" "!=" "") }}
+            <a href="{{ .link }}" target="_blank" title="{{ .type | title }}"><img src="/{{ .type }}.svg" alt="{{ .type }}"></a>
+            {{ end }}
+        </div>
+    </div>
+</div>

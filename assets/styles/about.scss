@@ -1,33 +1,6 @@
 @import "_include-media";
 
 .container {
-    .banner {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        .photo {
-            width: 40%;
-        }
-        .content {
-            width: 60%;
-            h1 {
-                font-size: 4rem;
-                font-weight: 500;
-                color: var(--text-color);
-            }
-            .intro {
-                font-size: 1.4rem;
-                font-weight: 400;
-                color: var(--alternate-color);
-                margin: 1rem 0;
-            }
-            .description {
-                font-size: 1.1rem;
-                font-weight: 300;
-                color: var(--text-color);
-            }
-        }
-    }
     .about {
         display: flex;
         flex-direction: column;
@@ -87,28 +60,6 @@
 }
 @include media(">phone", "<desktop") {
     .container {
-        .banner {
-            flex-direction: column-reverse;
-            align-items: center;
-            width: 100%;
-            .photo {
-                width: 100%;
-            }
-            .content {
-                width: 100%;
-                text-align: center;
-                h1 {
-                    font-size: 2.6rem;
-                }
-                .intro {
-                    font-size: 1.2rem;
-                }
-                .description {
-                    font-size: 1rem;
-                    font-weight: 400;
-                }
-            }
-        }
         .about {
             text-align: center;
             h2 {

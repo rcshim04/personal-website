@@ -1,0 +1,1 @@
+.container .project-cards{-moz-column-count:3;column-count:3;margin-top:3rem}.container .project-cards .column{width:100%;padding-bottom:1rem;display:inline-block}@media(min-width:321px) and (max-width:1023px){.container .project-cards{-moz-column-count:1;column-count:1;margin-top:2.6rem}.container .project-cards .column{padding-bottom:1rem;display:inline-block}}

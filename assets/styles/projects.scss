@@ -1,0 +1,25 @@
+@import "_include-media";
+
+.container {
+    .project-cards {
+        column-count: 3;
+        margin-top: 3rem;
+        .column {
+            width: 100%;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+    }
+}
+@include media(">phone", "<desktop") {
+    .container {
+        .project-cards {
+            column-count: 1;
+            margin-top: 2.6rem;
+            .column {
+                padding-bottom: 1rem;
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+@import "_include-media";
+
+@mixin filter($filter-type, $filter-amount) {
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem;
+    background-color: var(--ternary-bg-color);
+    border-radius: 0.25rem;
+    a {
+        .thumbnail {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 0.25rem;
+        }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        padding: 0.8rem;
+        padding-bottom: 0.6rem;
+        .title {
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 400;
+            .archive {
+                margin-left: 0.4rem;
+                cursor: default
+            }
+        }
+        .desc {
+            color: var(--alternate-color);
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        .tags {
+            padding: 1rem 0;
+            .tag {
+                padding: 0.2rem 0.6rem;
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+                line-height: 1.75rem;
+            }
+        }
+        .links {
+            display: flex;
+            a {
+                height: 1.4rem;
+                margin-left: 0.4rem;
+                img {
+                    height: 100%;
+
+                    @include filter(invert, var(--invert-filter));
+                }
+            }
+            a:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+@include media(">phone", "<desktop") {
+    .card {
+        padding: 0.6rem;
+        .info {
+            padding: 0.6rem;
+            padding-bottom: 0.4rem;
+            .tags {
+                padding: 0.8rem 0;
+                .tag {
+                    padding: 0.2rem 0.4rem;
+                }
+            }
+        }
+    }
+}

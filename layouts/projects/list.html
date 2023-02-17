@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $banner_scss := resources.Get "styles/banner.scss" }}
+{{ $projects_scss := resources.Get "styles/projects.scss" }}
+{{ $project_card_scss := resources.Get "styles/project-card.scss" }}
+{{ $banner_style := $banner_scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+{{ $projects_style := $projects_scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+{{ $project_card_style := $project_card_scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $banner_style.RelPermalink }}" integrity="{{ $banner_style.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $projects_style.RelPermalink }}" integrity="{{ $projects_style.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $project_card_style.RelPermalink }}" integrity="{{ $project_card_style.Data.Integrity }}">
+{{ $tag_colorizer := resources.Get "scripts/tag-color.js" }}
+{{ $js := $tag_colorizer | minify | fingerprint | resources.PostProcess }}
+<script src="{{ $js.RelPermalink }}"></script>
+
+<style>
+    nav #projects {
+        box-shadow: inset 0 -2px 0 var(--primary-color);
+    }
+</style>
+
+<div class="container">
+    <div class="banner">
+        <div class="content">
+            <h1>{{ .Title }}</h1>
+            <p class="intro">{{ .Params.intro }}</p>
+            <p class="description">{{ .Description }}</p>
+        </div>
+        <div class="photo"></div>
+    </div>
+    <div class="project-cards">
+        {{ range .Pages }}
+        <div class="column">
+            {{ partial "project-card.html" . }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

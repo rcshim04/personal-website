@@ -10,7 +10,7 @@
         <ul class="links">
             {{ range .Site.Menus.links }}
             <li class="{{ .Name | lower }}">
-                <a href="{{ .URL }}">{{ .Name | title }}</a>
+                <a href="{{ .URL }}" id="{{ .Name | lower }}">{{ .Name | title }}</a>
             </li>
             {{ end }}
         </ul>

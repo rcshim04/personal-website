@@ -1,7 +1,11 @@
-{{ define "main" }}{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
-{{ $scss := resources.Get "styles/about.scss" }}
-{{ $styles := $scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ define "main" }}
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $banner_scss := resources.Get "styles/banner.scss" }}
+{{ $about_scss := resources.Get "styles/about.scss" }}
+{{ $banner_style := $banner_scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+{{ $about_style := $about_scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $banner_style.RelPermalink }}" integrity="{{ $banner_style.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $about_style.RelPermalink }}" integrity="{{ $about_style.Data.Integrity }}">
 
 {{ $content_parts := split .Content "||||||||||" }}
 <style>
