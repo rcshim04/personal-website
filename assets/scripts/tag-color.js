@@ -16,6 +16,6 @@ $(document).ready(function() {
         for(let i = 0; i < text.length; i++) {
             sum += key.indexOf(text[i]);
         }
-        $(this).css("background-color", `hsl(${sum * 360 / key.length}deg 100% 85%)`)
+        $(this).css("background-color", `hsl(${sum * 360 / key.length}deg 100% var(--tag-light))`)
     });
 });

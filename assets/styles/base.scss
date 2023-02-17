@@ -25,6 +25,7 @@
     --secondary-bg-color: #505050;
     --ternary-bg-color: #333333;
     --invert-filter: 1;
+    --tag-light: 25%;
 }
 
 [data-theme="light"] {
@@ -37,6 +38,7 @@
     --secondary-bg-color: #CCCCFF;
     --ternary-bg-color: #F5F5FF;
     --invert-filter: 0;
+    --tag-light: 85%;
 }
 
 * {
