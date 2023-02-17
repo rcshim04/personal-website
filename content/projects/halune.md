@@ -1,8 +1,8 @@
 ---
-title: "{{ replace .Name "-" " " }}"
-date: {{ .Date }}
-description: ""
-tags: []
+title: "halune"
+date: 2023-02-17T13:51:56-05:00
+description: "Photobook Shop"
+tags: ["Web Design", "Shopify"]
 archived: false
 links: 
     github: 
@@ -19,10 +19,10 @@ links:
         weight: 3
     link:
         type: "link"
-        link: ""
+        link: "https://halune.com/"
         weight: 4
-thumbnail: "thumbnails/{{ replace .Name " " "-" | lower }}.png"
-slug: "{{ replace .Name " " "-" | lower}}"
+thumbnail: "thumbnails/halune.png"
+slug: "halune"
 layout: project
 ---
 
