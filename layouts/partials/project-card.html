@@ -10,15 +10,20 @@
             {{ end }}
         </h3>
         <p class="desc">{{ .Description }}</p>
+        {{ if not (eq (len .Params.tags) 0) }}
         <div class="tags">
             {{ range .Params.tags }}
-                <span class="tag" data-tag="{{ . }}">{{ . }}</span>
+                <span class="tag">{{ . }}</span>
             {{ end }}
         </div>
+        {{ end }}
+        {{ $valid_links := (where (sort .Params.links "weight") "link" "!=" "") }}
+        {{ if not (eq (len $valid_links) 0) }}
         <div class="links">
             {{ range (where (sort .Params.links "weight") "link" "!=" "") }}
-            <a href="{{ .link }}" target="_blank" title="{{ .type | title }}"><img src="/{{ .type }}.svg" alt="{{ .type }}"></a>
+            <a href="{{ .link }}" target="_blank" class="link" title="{{ .type | title }}"><img src="/{{ .type }}.svg" alt="{{ .type }}"></a>
             {{ end }}
         </div>
+        {{ end }}
     </div>
 </div>
