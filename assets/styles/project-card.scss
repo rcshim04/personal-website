@@ -73,10 +73,13 @@
             padding: 0.6rem;
             padding-bottom: 0.4rem;
             .tags {
-                padding: 0.8rem 0;
+                padding-top: 0.8rem;
                 .tag {
                     padding: 0.2rem 0.4rem;
                 }
+            }
+            .links {
+                padding-top: 0.8rem;
             }
         }
     }
