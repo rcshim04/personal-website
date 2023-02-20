@@ -82,6 +82,7 @@
 @include media(">phone", "<desktop") {
     .container {
         .banner {
+            flex-direction: column !important;
             align-items: center;
             width: 100%;
             .photo {
