@@ -2,6 +2,7 @@
 title: "Amoris"
 date: 2022-02-05T12:30:00-05:00
 description: "Online Game"
+intro: "A Valentine's themed parody of Tetris built in p5.js."
 tags: ["p5.js", "Express.js", "HTML5", "CSS", "Game Dev"]
 archived: false
 links: 
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/amoris.png"
 slug: "amoris"
-layout: project
 ---
 

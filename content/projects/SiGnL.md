@@ -1,6 +1,7 @@
 ---
 title: "SiGnL"
 date: 2022-09-18T09:00:00-04:00
+intro: "A live sign language translator for American Sign Language created for Hack the North 2022."
 description: "Live ASL Translator"
 tags: ["Python3", "Tensorflow", "OpenCV", "ML", "Hackathon"]
 archived: false
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/signl.jpg"
 slug: "signl"
-layout: project
 ---
 

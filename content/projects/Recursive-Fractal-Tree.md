@@ -1,6 +1,7 @@
 ---
 title: "Recursive Fractal Tree"
 date: 2020-04-02T13:00:00-04:00
+intro: "A simple visualization of recursion written in Processing."
 description: "Concept Visualization"
 tags: ["Processing", "Visualization"]
 archived: false
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/recursive-fractal-tree.png"
 slug: "recursive-fractal-tree"
-layout: project
 ---
 

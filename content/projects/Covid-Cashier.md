@@ -1,6 +1,7 @@
 ---
 title: "Covid Cashier"
 date: 2020-05-22T12:00:00-04:00
+intro: "A series of minigames based on COVID-19 safety procedures."
 description: "Video Game"
 tags: ["Java", "Game Dev", "ICS"]
 archived: true
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/covid-cashier.png"
 slug: "covid-cashier"
-layout: project
 ---
 

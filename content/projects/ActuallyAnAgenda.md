@@ -1,6 +1,7 @@
 ---
 title: "ActuallyAnAgenda"
 date: 2020-05-03T09:00:00-04:00
+intro: "A personalized task organizer and scheduler created for TOHacks 2020."
 description: "Task Organizer"
 tags: ["Java", "HTML5", "CSS", "Javascript", "Firebase", "Full Stack", "Hackathon"]
 archived: true
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/actuallyanagenda.png"
 slug: "actuallyanagenda"
-layout: project
 ---
 

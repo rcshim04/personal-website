@@ -1,6 +1,7 @@
 ---
-title: "Dark Theme Color Converter"
+title: "Dark Theme Colors"
 date: 2022-04-01T16:30:00-04:00
+intro: "A simple site that converts a color to its dark mode equivalent."
 description: "Concept Website"
 tags: ["HTML5", "CSS", "JQuery", "Frontend"]
 archived: false
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/dark-color.png"
 slug: "dark-color"
-layout: project
 ---
 

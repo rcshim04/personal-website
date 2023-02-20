@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $banner_style := resources.Get "styles/banner.scss" | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $banner_style.RelPermalink }}" integrity="{{ $banner_style.Data.Integrity }}">
+{{ $tag_colorizer := resources.Get "scripts/tag-color.js" }}
+{{ $js := $tag_colorizer | minify | fingerprint | resources.PostProcess }}
+<script src="{{ $js.RelPermalink }}"></script>
+<style>
+    nav #projects {
+        box-shadow: inset 0 -2px 0 var(--primary-color);
+    }
+</style>
+
+<div class="container">
+    <div class="banner">
+        <div class="photo"><img src="/projects/{{ .Params.thumbnail }}" alt="{{ .Title }}"></div>
+        <div class="content">
+            <h1>{{ .Title }}</h1>
+            <p class="description">{{ .Description }}</p>
+            <p class="intro">{{ .Params.intro }}</p>
+            {{ if not (eq (len .Params.tags) 0) }}
+            <div class="tags">
+                {{ range .Params.tags }}
+                    <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ $valid_links := (where (sort .Params.links "weight") "link" "!=" "") }}
+            {{ if not (eq (len $valid_links) 0) }}
+            <div class="links">
+                {{ range (where (sort .Params.links "weight") "link" "!=" "") }}
+                <a href="{{ .link }}" target="_blank" class="link" title="{{ .type | title }}"><img src="/{{ .type }}.svg" alt="{{ .type }}"></a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

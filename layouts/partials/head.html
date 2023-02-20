@@ -14,8 +14,7 @@
     {{ end }}
 
     {{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
-    {{ $scss := resources.Get "styles/base.scss" }}
-    {{ $styles := $scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+    {{ $styles := resources.Get "styles/base.scss" | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,6 +1,7 @@
 ---
 title: "Sheet Music"
 date: 2020-04-28T11:30:00-04:00
+intro: "Sheet music for popular songs that I transcribed."
 description: "Song Transcriptions"
 tags: ["Musescore", "Music Notation"]
 archived: false
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/sheet-music.png"
 slug: "sheet-music"
-layout: project
 ---
 

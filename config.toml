@@ -40,3 +40,6 @@ title = 'Eric Shim'
     icon = "/instagram.svg"
     url = "https://www.instagram.com/reishi.04/"
     weight = 5
+
+[params]
+    close_words = ["Cool!", "Great!", "Okay!", "Awesome!", "Wow!", "Got it!"]

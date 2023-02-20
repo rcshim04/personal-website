@@ -1,6 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " }}"
 date: {{ .Date }}
+intro: ""
 description: ""
 tags: []
 archived: false
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/{{ replace .Name " " "-" | lower }}.png"
 slug: "{{ replace .Name " " "-" | lower}}"
-layout: project
 ---
 

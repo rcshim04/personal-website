@@ -1,38 +1,87 @@
 @import "_include-media";
 
+@mixin filter($filter-type, $filter-amount) {
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
 .container {
     .banner {
         display: flex;
         align-items: center;
         width: 100%;
         .content {
-            width: 50%;
+            width: 54%;
+            padding: 1.6rem 0;
             h1 {
                 font-size: 4rem;
                 font-weight: 500;
+                line-height: 4rem;
                 color: var(--text-color);
+                padding: 0;
             }
             .intro {
                 font-size: 1.4rem;
                 font-weight: 400;
                 color: var(--alternate-color);
-                margin: 1rem 0;
+                padding: 0;
+                margin-top: 1rem;
             }
             .description {
                 font-size: 1.1rem;
                 font-weight: 300;
                 color: var(--text-color);
+                padding: 0;
+                margin-top: 1rem;
+            }
+            .tags {
+                padding: 0;
+                margin-top: 1rem;
+                .tag {
+                    color: var(--text-color);
+                    padding: 0.2rem 0.6rem;
+                    border-radius: 0.25rem;
+                    font-size: 0.75rem;
+                    line-height: 1.75rem;
+                    white-space: nowrap;
+                }
+            }
+            .links {
+                display: flex;
+                padding: 0;
+                margin-top: 1rem;
+                a {
+                    height: 1.6rem;
+                    margin-left: 1rem;
+                    img {
+                        height: 100%;
+    
+                        @include filter(invert, var(--invert-filter));
+                    }
+                }
+                a:first-child {
+                    margin-left: 0;
+                }
             }
         }
-    }
-    .photo {
-        width: 50%;
+        .photo {
+            width: 46%;
+            padding: 1.6rem 0;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        div:first-child {
+            padding-right: 0.8rem;
+        }
+        div:last-child {
+            padding-left: 0.8rem;
+        }
     }
 }
 @include media(">phone", "<desktop") {
     .container {
         .banner {
-            flex-direction: column-reverse;
             align-items: center;
             width: 100%;
             .photo {

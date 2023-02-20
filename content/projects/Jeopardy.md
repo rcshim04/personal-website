@@ -1,6 +1,7 @@
 ---
 title: "Jeopardy"
 date: 2020-01-14T15:05:00-05:00
+intro: "A game adaptation of the popular TV show, Jeopardy!, built in Java."
 description: "Video Game"
 tags: ["Java", "Ready To Program", "Game Dev", "ICS"]
 archived: true
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/jeopardy.png"
 slug: "jeopardy"
-layout: project
 ---
 

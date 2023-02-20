@@ -1,6 +1,7 @@
 ---
 title: "Population Growth"
 date: 2022-01-24T15:00:00-05:00
+intro: "A interactive website that calculates and displays the logistic differential growth model."
 description: "Website"
 tags: ["HTML5", "CSS", "JQuery", "D3.js", "Frontend", "Calculus"]
 archived: true
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/population-growth.png"
 slug: "population-growth"
-layout: project
 ---
 

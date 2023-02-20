@@ -1,6 +1,7 @@
 ---
 title: "Atomic Scientists"
 date: 2021-12-18T13:00:00-05:00
+intro: "A gacha game-inspired, interactive chemistry history infographic."
 description: "Website"
 tags: ["HTML5", "CSS", "JQuery", "Frontend", "History"]
 archived: true
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/atomic-scientists.png"
 slug: "atomic-scientists"
-layout: project
 ---
 

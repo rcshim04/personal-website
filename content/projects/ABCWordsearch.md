@@ -1,6 +1,7 @@
 ---
 title: "ABCWordsearch"
 date: 2019-06-10T13:59:00-04:00
+intro: "A simple technology-themed wordsearch game built in Processing."
 description: "Video Game"
 tags: ["Processing", "Game Dev", "ICS"]
 archived: true
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/abcwordsearch.png"
 slug: "abcwordsearch"
-layout: project
 ---
 

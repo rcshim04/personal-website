@@ -1,7 +1,6 @@
 {{ define "main" }}
 {{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
-{{ $scss := resources.Get "styles/404.scss" }}
-{{ $styles := $scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+{{ $styles := resources.Get "styles/404.scss" | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
 <div class="container">

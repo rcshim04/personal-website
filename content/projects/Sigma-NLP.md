@@ -1,6 +1,7 @@
 ---
 title: "Sigma NLP"
 date: 2020-08-24T09:00:00-04:00
+intro: "A precise and streamlined neural network-based sentiment analyzer created for Ignition Hacks 2020. 3rd place winner overall."
 description: "Neural Networks"
 tags: ["Python3", "Tensorflow", "Regex", "ML", "Hackathon"]
 archived: false
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/sigma-nlp.png"
 slug: "sigma-nlp"
-layout: project
 ---
 

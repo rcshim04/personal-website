@@ -1,6 +1,7 @@
 ---
 title: "MALSuggest"
 date: 2021-01-04T17:00:00-05:00
+intro: "A script that suggests a new anime based on watch history."
 description: "Anime Suggestion Program"
 tags: ["Python3", "JikanAPI", "Requests", "Anime"]
 archived: false
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/malsuggest.png"
 slug: "malsuggest"
-layout: project
 ---
 

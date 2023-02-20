@@ -1,0 +1,10 @@
+<div class="popup" id="popup-{{ .Slug }}">
+    <div class="overlay"></div>
+    <div class="popup-box">
+        {{ $words := .Site.Params.close_words }}
+        {{ $i := (index (seq 0 (sub (len $words) 1) | shuffle) 0) }}
+        <h3 class="title">{{ .Title }}</h3>
+        <p class="intro">{{ .Params.intro }}</p>
+        <a class="more-button popup-close" id="close-{{ .Slug }}">{{ index $words $i }}</a>
+    </div>
+</div>

@@ -11,6 +11,7 @@
     background-color: var(--ternary-bg-color);
     border-radius: 0.25rem;
     a {
+        cursor: pointer;
         .thumbnail {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -40,7 +41,7 @@
             font-weight: 300;
         }
         .tags {
-            padding-top: 1rem;
+            margin-top: 1rem;
             .tag {
                 color: var(--text-color);
                 padding: 0.2rem 0.6rem;
@@ -52,7 +53,7 @@
         }
         .links {
             display: flex;
-            padding-top: 1rem;
+            margin-top: 1rem;
             a {
                 height: 1.4rem;
                 margin-left: 0.6rem;

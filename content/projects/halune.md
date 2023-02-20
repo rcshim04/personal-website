@@ -1,6 +1,7 @@
 ---
 title: "halune"
 date: 2022-06-26T03:44:00-04:00
+intro: "A passion project created by a team of artists."
 description: "Photobook Shop"
 tags: ["Web Design", "Shopify"]
 archived: false
@@ -23,6 +24,5 @@ links:
         weight: 4
 thumbnail: "thumbnails/halune.png"
 slug: "halune"
-layout: project
 ---
 
