@@ -1,3 +1,5 @@
+@import "_include-media";
+
 .popup {
     position: fixed;
     display: flex;
@@ -46,4 +48,12 @@
 .popup.active {
     pointer-events: all;
     opacity: 1;
+}
+
+@include media(">phone", "<desktop") {
+    .popup {
+        .popup-box {
+            width: 90%;
+        }
+    }
 }
