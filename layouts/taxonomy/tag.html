@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $tag_list_style := resources.Get "styles/tag-list.scss" | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $tag_list_style.RelPermalink }}" integrity="{{ $tag_list_style.Data.Integrity }}">
+<ul class="post-list">
+    {{ range .Data.Pages }}
+    <a href="{{.RelPermalink}}">
+        <li class="post">
+            <img src="/projects/{{ .Params.thumbnail }}" alt="{{ .Title }}">
+            <p>{{ .Title }}</p>
+        </li>
+    </a>
+    {{ end }}
+</ul>
+{{ end }}

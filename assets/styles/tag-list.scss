@@ -1,0 +1,33 @@
+@import "_include-media";
+
+.post-list {
+    width: 36%;
+    list-style: none;
+    a {
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.6rem;
+        color: var(--text-color);
+        background-color: var(--secondary-bg-color);
+        text-decoration: none;
+        border-radius: 0.25rem;
+        .post {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            img {
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                height: 3rem;
+                margin-right: 0.8rem;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .post:first-child {
+        margin-top: 0;
+    }
+}

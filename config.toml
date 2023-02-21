@@ -43,3 +43,6 @@ title = 'Eric Shim'
 
 [params]
     close_words = ["Cool!", "Great!", "Okay!", "Awesome!", "Wow!", "Got it!"]
+
+[taxonomies]
+  tag = 'tags'
