@@ -1,6 +1,6 @@
 ---
 title: "Project Metropolis"
-date: 2022-08-23T18:20:00-04:00
+date: 2021-08-23T18:20:00-04:00
 intro: "A student-run website project that centralizes school resources and information for all students to access."
 description: "School Website"
 tags: ["HTML5", "CSS", "JQuery", "Django", "Full Stack", "Highschool"]
