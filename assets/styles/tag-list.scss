@@ -1,33 +1,66 @@
 @import "_include-media";
 
-.post-list {
-    width: 36%;
-    list-style: none;
-    a {
-        display: block;
-        width: 100%;
-        margin-top: 1rem;
-        padding: 0.6rem;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: var(--text-color);
-        background-color: var(--secondary-bg-color);
-        text-decoration: none;
-        border-radius: 0.25rem;
-        .post {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            img {
-                aspect-ratio: 1 / 1;
-                object-fit: cover;
-                height: 3rem;
-                margin-right: 0.8rem;
-            }
-            p {
-                font-size: 1.4rem;
-            }
+        margin-bottom: 1rem;
+        span {
+            margin-right: 0.5rem;
         }
     }
-    .post:first-child {
-        margin-top: 0;
+    .post-list {
+        width: 40%;
+        padding: 0;
+        list-style: none;
+        a {
+            display: block;
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.6rem;
+            color: var(--text-color);
+            background-color: var(--secondary-bg-color);
+            text-decoration: none;
+            border-radius: 0.25rem;
+            .post {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                img {
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                    height: 3rem;
+                    margin-right: 0.8rem;
+                }
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        a:first-child {
+            margin-top: 0;
+        }
+    }
+}
+@include media(">phone", "<desktop") {
+    .container {
+        .post-list {
+            width: 100%;
+            a {
+                .post {
+                    img {
+                        height: 2rem;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
     }
 }

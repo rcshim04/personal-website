@@ -2,6 +2,9 @@
 {{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
 {{ $tag_list_style := resources.Get "styles/tag-list.scss" | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $tag_list_style.RelPermalink }}" integrity="{{ $tag_list_style.Data.Integrity }}">
+
+<div class="container">
+<h2><span class="material-icons">local_offer</span>{{ .Data.Term }}</h2>
 <ul class="post-list">
     {{ range .Data.Pages }}
     <a href="{{.RelPermalink}}">
@@ -12,4 +15,5 @@
     </a>
     {{ end }}
 </ul>
+</div>  
 {{ end }}
