@@ -5,6 +5,7 @@ intro: ""
 description: ""
 tags: []
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

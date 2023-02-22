@@ -5,6 +5,7 @@ intro: "A simple site that converts a color to its dark mode equivalent."
 description: "Concept Website"
 tags: ["HTML5", "CSS", "JQuery", "Frontend"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

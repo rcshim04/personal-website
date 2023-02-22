@@ -5,6 +5,7 @@ intro: "A simple visualization of recursion written in Processing."
 description: "Concept Visualization"
 tags: ["Processing", "Visualization"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

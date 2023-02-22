@@ -5,6 +5,7 @@ intro: "A series of minigames based on COVID-19 safety procedures."
 description: "Video Game"
 tags: ["Java", "Game Dev", "ICS"]
 archived: true
+winner: false
 links: 
     github: 
         type: "github"

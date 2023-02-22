@@ -5,6 +5,7 @@ intro: "A student-run website project that centralizes school resources and info
 description: "School Website"
 tags: ["HTML5", "CSS", "JQuery", "Django", "Full Stack", "Highschool"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

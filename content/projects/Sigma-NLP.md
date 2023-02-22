@@ -5,6 +5,7 @@ intro: "A precise and streamlined neural network-based sentiment analyzer create
 description: "Neural Networks"
 tags: ["Python3", "Tensorflow", "Regex", "ML", "Hackathon"]
 archived: false
+winner: true
 links: 
     github: 
         type: "github"

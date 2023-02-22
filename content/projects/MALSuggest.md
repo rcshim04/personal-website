@@ -5,6 +5,7 @@ intro: "A script that suggests a new anime based on watch history."
 description: "Anime Suggestion Program"
 tags: ["Python3", "JikanAPI", "Requests", "Anime"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

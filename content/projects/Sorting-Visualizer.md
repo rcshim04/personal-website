@@ -5,6 +5,7 @@ intro: "A basic visualization of a variety of sorting algorithms, built in Java.
 description: "Concept Visualization"
 tags: ["Java", "Algorithms", "Visualization"]
 archived: true
+winner: false
 links: 
     github: 
         type: "github"

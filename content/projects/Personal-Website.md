@@ -5,6 +5,7 @@ intro: "My personal portfolio website. Built with love using Hugo."
 description: "Website"
 tags: ["HTML5", "SCSS", "JQuery", "Hugo", "Frontend", "Web Design"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

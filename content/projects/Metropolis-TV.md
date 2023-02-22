@@ -5,6 +5,7 @@ intro: "A simple website that displays the time, announcements, weather, and sch
 description: "School Website"
 tags: ["HTML5", "CSS", "JQuery", "Frontend", "Highschool"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

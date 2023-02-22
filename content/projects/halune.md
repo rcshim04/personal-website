@@ -5,6 +5,7 @@ intro: "A passion project created by a team of artists."
 description: "Photobook Shop"
 tags: ["Web Design", "Shopify"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

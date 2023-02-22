@@ -5,6 +5,7 @@ intro: "Sheet music for popular songs that I transcribed."
 description: "Song Transcriptions"
 tags: ["Musescore", "Music Notation"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

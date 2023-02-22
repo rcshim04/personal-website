@@ -5,6 +5,7 @@ intro: "A personalized task organizer and scheduler created for TOHacks 2020."
 description: "Task Organizer"
 tags: ["Java", "HTML5", "CSS", "Javascript", "Firebase", "Full Stack", "Hackathon"]
 archived: true
+winner: false
 links: 
     github: 
         type: "github"

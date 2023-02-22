@@ -5,6 +5,7 @@ intro: "A model of the famous GNR No. 1 class 4-2-2 \"Stirling Single\" steam lo
 description: "CAD Model"
 tags: ["Solidworks", "3D Modelling", "Trains"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

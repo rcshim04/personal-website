@@ -5,6 +5,7 @@ intro: "A gacha game-inspired, interactive chemistry history infographic."
 description: "Website"
 tags: ["HTML5", "CSS", "JQuery", "Frontend", "History"]
 archived: true
+winner: false
 links: 
     github: 
         type: "github"

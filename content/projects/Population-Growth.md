@@ -5,6 +5,7 @@ intro: "A interactive website that calculates and displays the logistic differen
 description: "Website"
 tags: ["HTML5", "CSS", "JQuery", "D3.js", "Frontend", "Calculus"]
 archived: true
+winner: false
 links: 
     github: 
         type: "github"

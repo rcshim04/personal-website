@@ -5,6 +5,7 @@ intro: "My old portfolio website created in 2020."
 description: "Website"
 tags: ["HTML5", "CSS", "Javascript", "Frontend", "ICS"]
 archived: true
+winner: false
 links: 
     github: 
         type: "github"

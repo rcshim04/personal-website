@@ -5,6 +5,7 @@ intro: "A game adaptation of the popular TV show, Jeopardy!, built in Java."
 description: "Video Game"
 tags: ["Java", "Ready To Program", "Game Dev", "ICS"]
 archived: true
+winner: false
 links:
     github: 
         type: "github"

@@ -5,6 +5,7 @@ intro: "A mockup of a possible highschool website design. Also a student council
 description: "Mock Student Council Website"
 tags: ["HTML5", "CSS", "Javascript", "Frontend", "Web Design", "Highschool"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

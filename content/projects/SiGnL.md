@@ -5,6 +5,7 @@ intro: "A live sign language translator for American Sign Language created for H
 description: "Live ASL Translator"
 tags: ["Python3", "Tensorflow", "OpenCV", "ML", "Hackathon"]
 archived: false
+winner: false
 links: 
     github: 
         type: "github"

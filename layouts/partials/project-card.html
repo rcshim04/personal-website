@@ -8,6 +8,9 @@
             {{ if .Params.archived }}
             <span class="material-icons archive" title="Archived">archive</span>
             {{ end }}
+            {{ if .Params.winner }}
+            <span class="material-icons winner" title="Won Hackathon">emoji_events</span>
+            {{ end }}
         </h3>
         <p class="desc">{{ .Description }}</p>
         {{ if not (eq (len .Params.tags) 0) }}
