@@ -47,7 +47,7 @@
         width: 50%;
     }
 }
-@include media(">phone", "<desktop") {
+@include media-query("<desktop", "retina2x") using ($query-list) {
     .container {
         flex-direction: column-reverse;
         justify-content: flex-end;

@@ -17,7 +17,7 @@
         margin-top: 1rem;
     }
 }
-@include media(">phone", "<desktop") {
+@include media-query("<desktop", "retina2x") using ($query-list) {
     .container {
         h1 {
             font-size: 5rem;

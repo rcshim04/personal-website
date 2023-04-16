@@ -303,7 +303,7 @@ footer {
     line-height: 1.2rem;
 }
 
-@include media(">phone", "<desktop") {
+@include media-query("<desktop", "retina2x") using ($query-list) {
     :root {
         --site-width: 100%
     }

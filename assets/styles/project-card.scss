@@ -69,7 +69,7 @@
         }
     }
 }
-@include media(">phone", "<desktop") {
+@include media-query("<desktop", "retina2x") using ($query-list) {
     .card {
         padding: 0.6rem;
         .info {

@@ -564,3 +564,13 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
     }
   }
 }
+
+@mixin media-query($queries...) {
+  $query-list: ();
+  @each $query in $queries {
+    $query-list: append($query-list, $query, 'comma');
+    @include media($query-list...) {
+        @content($query-list);
+    }
+  }
+}

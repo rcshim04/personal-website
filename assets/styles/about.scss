@@ -58,7 +58,7 @@
         }
     }
 }
-@include media(">phone", "<desktop") {
+@include media-query("<desktop", "retina2x") using ($query-list) {
     .container {
         .about {
             text-align: center;

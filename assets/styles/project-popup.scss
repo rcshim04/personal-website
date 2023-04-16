@@ -55,7 +55,7 @@
     opacity: 1;
 }
 
-@include media(">phone", "<desktop") {
+@include media-query("<desktop", "retina2x") using ($query-list) {
     .popup {
         .popup-box {
             width: 90%;
