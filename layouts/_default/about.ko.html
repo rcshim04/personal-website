@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $banner_scss := resources.Get "styles/banner.scss" }}
+{{ $about_scss := resources.Get "styles/about.scss" }}
+{{ $banner_style := $banner_scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+{{ $about_style := $about_scss | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $banner_style.RelPermalink }}" integrity="{{ $banner_style.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $about_style.RelPermalink }}" integrity="{{ $about_style.Data.Integrity }}">
+
+{{ $content_parts := split .Content "||||||||||" }}
+<style>
+    nav #about {
+        box-shadow: inset 0 -2px 0 var(--primary-color);
+    }
+    .container .banner {
+        flex-direction: row;
+    }
+</style>
+
+<div class="container">
+    <div class="banner">
+        <div class="photo"></div>
+        <div class="content">
+            <h1>{{ .Title }}</h1>
+            {{ index $content_parts 0 | safeHTML }}
+        </div>
+    </div>
+    <div class="about">
+        <div class="skills">
+            <h2>내가 할수있는 것</h2>
+            <div class="lists">
+                <div>
+                    {{ index $content_parts 1 | safeHTML }}
+                </div>
+                <div>
+                    {{ index $content_parts 2 | safeHTML }}
+                </div>
+            </div>
+        </div>
+        <div class="facts">
+            <h2>나에 대한 이런저런에 사실</h2>
+            <div class="lists">
+                <div class="list">
+                    {{ index $content_parts 3 | safeHTML }}
+                </div>
+                <div class="photo"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

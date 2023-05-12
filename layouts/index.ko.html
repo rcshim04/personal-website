@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $styles := resources.Get "styles/index.scss" | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ $typewriter := resources.Get "scripts/ko-typewriter.js" }}
+{{ $js := $typewriter | minify | fingerprint | resources.PostProcess }}
+<script src="{{ $js.RelPermalink }}"></script>
+
+<div class="container">
+    <div class="intro">
+        <h1>안녕, 난 정호야</h1>
+        <div class="description-text-group">
+            <span class="description-text" id="description-text-0">ㅇ우웨웹| |ㄱ개|ㅂ바발|ㅈ자|ㅇ이입|ㄴ니|ㄷ다|.|</span>
+            <span class="description-text" id="description-text-1">ㅇ우웨웹| |ㄷ디|ㅈ자|ㅇ이|ㄴ너|ㅇ이입|ㄴ니|ㄷ다|.|</span>
+            <span class="description-text" id="description-text-2">ㅍ프|ㄹ로|ㄱ그|ㄹ래|ㅁ머|ㅇ이입|ㄴ니|ㄷ다|.</span>
+            <span class="description-text" id="description-text-3">ㅇ야|ㅅ시심| |ㅊ차찬| |ㅇ예|ㅅ수술|ㄱ가|ㅇ입|ㄴ니|ㄷ다|.|</span>
+            <span class="description-text" id="description-text-4">ㅇ으음|ㅇ아악| |ㅇ애|ㅎ호|ㄱ가|ㅇ이입|ㄴ니|ㄷ다|.|</span>
+        </div>
+        <div class="description">
+            <span>나는 </span><span class="animated-text"></span>
+        </div>
+        <div class="buttons">
+            <a href="/ko/about/" class="more-button">나에 대해 더</a>
+            <div class="social-buttons">
+                {{ range .Site.Params.socials }}
+                <a href="{{ .url }}" target="_blank"><img src="{{ .icon }}" alt="{{ .name }}"></a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    <div class="photo"></div>
+</div>
+{{ end }}

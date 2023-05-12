@@ -1,9 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " }}"
-date: {{ .Date }}
-intro: ""
-description: ""
-tags: []
+title: "Amoris"
+date: 2022-02-05T12:30:00-05:00
+intro: "A Valentine's themed parody of Tetris built in p5.js."
+description: "Online Game"
+tags: ["p5.js", "Express.js", "HTML5", "CSS", "Game Dev"]
 archived: false
 winner: false
 links: 
@@ -21,9 +21,9 @@ links:
         weight: 3
     link:
         type: "link"
-        link: ""
+        link: "https://doodle.maclyonsden.com/"
         weight: 4
-thumbnail: "/projects/thumbnails/{{ replace .Name " " "-" | lower }}.png"
-slug: "{{ replace .Name " " "-" | lower}}"
+thumbnail: "/projects/thumbnails/amoris.png"
+slug: "amoris"
 ---
 

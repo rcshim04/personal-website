@@ -1,48 +1,89 @@
 baseURL = 'https://ericshim.ca'
 languageCode = 'en-us'
-title = 'Eric Shim'
+defaultContentLanguage = 'en'
 
-[[menu.links]]
-    name = "About"
-    url = "/about/"
-    weight = 1
-[[menu.links]]
-    name = "Projects"
-    url = "/projects/"
-    weight = 2
+[languages]
+    [languages.en]
+        languageCode = 'en'
+        languageName = 'English'
+        title = 'Eric Shim'
+        weight = 1
+    [languages.en.menu]
+    [languages.en.params]
+        close_words = ['Cool!', 'Great!', 'Okay!', 'Awesome!', 'Wow!', 'Got it!']
+[[languages.en.menu.links]]
+    name = 'About'
+    url = '/about/'
+    weight = 10
+[[languages.en.menu.links]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 20
+
+    [languages.ko]
+        languageCode = 'ko'
+        languageName = '한국어'
+        title = '심정호'
+        weight = 2
+    [languages.ko.menu]
+    [languages.ko.params]
+        close_words = ['좋아요!', '대박!', '오케이!', '멋지다!', '와우!', '알겠어요!']
+[[languages.ko.menu.links]]
+    name = '나에 대해'
+    url = '/ko/about/'
+    weight = 10
+[[languages.ko.menu.links]]
+    name = '프로젝트'
+    url = '/ko/projects/'
+    weight = 20
+
+    [languages.ja]
+        languageCode = 'ja'
+        languageName = '日本語'
+        title = 'シム・エリク'
+        weight = 3
+    [languages.ja.menu]
+    [languages.ja.params]
+        close_words = ['いいね！', 'すごい！', 'オーケー！', 'さいこうだ！', 'わあ！', 'わかった！']
+[[languages.ja.menu.links]]
+    name = '僕について'
+    url = '/ja/about/'
+    weight = 10
+[[languages.ja.menu.links]]
+    name = 'プロジェクト'
+    url = '/ja/projects/'
+    weight = 20
+
 # [[menu.links]]
-#     name = "Blog"
-#     url = "/Blog/"
+#     name = 'Blog'
+#     url = '/Blog/'
 #     weight = 3
 
 [[params.socials]]
-    name = "Email"
-    icon = "/email.svg"
-    url = "mailto:eshim@uwaterloo.ca"
+    name = 'Email'
+    icon = '/email.svg'
+    url = 'mailto:eshim@uwaterloo.ca'
     weight = 1
 [[params.socials]]
-    name = "LinkedIn"
-    icon = "/linkedin2.svg"
-    url = "https://www.linkedin.com/in/ericjshim/"
+    name = 'LinkedIn'
+    icon = '/linkedin2.svg'
+    url = 'https://www.linkedin.com/in/ericjshim/'
     weight = 2
 [[params.socials]]
-    name = "Github"
-    icon = "/github.svg"
-    url = "https://github.com/rcshim04"
+    name = 'Github'
+    icon = '/github.svg'
+    url = 'https://github.com/rcshim04'
     weight = 3
 [[params.socials]]
-    name = "Twitter"
-    icon = "/twitter.svg"
-    url = "https://twitter.com/reishicm"
+    name = 'Twitter'
+    icon = '/twitter.svg'
+    url = 'https://twitter.com/reishicm'
     weight = 4
 [[params.socials]]
-    name = "Instagram"
-    icon = "/instagram.svg"
-    url = "https://www.instagram.com/reishi.04/"
+    name = 'Instagram'
+    icon = '/instagram.svg'
+    url = 'https://www.instagram.com/er.icshim/'
     weight = 5
-
-[params]
-    close_words = ["Cool!", "Great!", "Okay!", "Awesome!", "Wow!", "Got it!"]
 
 [taxonomies]
   tag = 'tags'

@@ -32,6 +32,9 @@
         </div>
     </div>
     <div class="project-cards">
+        <script>
+            console.log("{{ .Pages }}");
+        </script>
         {{ range .Pages }}
         <div class="column">
             {{ partial "project-card.html" . }}

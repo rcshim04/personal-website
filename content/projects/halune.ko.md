@@ -1,9 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " }}"
-date: {{ .Date }}
-intro: ""
-description: ""
-tags: []
+title: "halune"
+date: 2022-06-26T03:44:00-04:00
+intro: "아티스트 팀이 만든 열정 프로젝트."
+description: "포토북 샵"
+tags: ["웹 디자인", "Shopify"]
 archived: false
 winner: false
 links: 
@@ -21,9 +21,9 @@ links:
         weight: 3
     link:
         type: "link"
-        link: ""
+        link: "https://halune.com/"
         weight: 4
-thumbnail: "/projects/thumbnails/{{ replace .Name " " "-" | lower }}.png"
-slug: "{{ replace .Name " " "-" | lower}}"
+thumbnail: "/projects/thumbnails/halune.png"
+slug: "halune"
 ---
 

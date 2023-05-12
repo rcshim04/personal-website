@@ -1,9 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " }}"
-date: {{ .Date }}
-intro: ""
-description: ""
-tags: []
+title: "halune"
+date: 2022-06-26T03:44:00-04:00
+intro: "A passion project created by a team of artists."
+description: "Photobook Shop"
+tags: ["Web Design", "Shopify"]
 archived: false
 winner: false
 links: 
@@ -21,9 +21,9 @@ links:
         weight: 3
     link:
         type: "link"
-        link: ""
+        link: "https://halune.com/"
         weight: 4
-thumbnail: "/projects/thumbnails/{{ replace .Name " " "-" | lower }}.png"
-slug: "{{ replace .Name " " "-" | lower}}"
+thumbnail: "/projects/thumbnails/halune.png"
+slug: "halune"
 ---
 

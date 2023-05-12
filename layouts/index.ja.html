@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ $options := dict "use" "autoprefixer" "enableSourceMap" true }}
+{{ $styles := resources.Get "styles/index.scss" | resources.ToCSS | resources.PostCSS $options | minify | fingerprint | resources.PostProcess }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ $typewriter := resources.Get "scripts/ja-typewriter.js" }}
+{{ $js := $typewriter | minify | fingerprint | resources.PostProcess }}
+<script src="{{ $js.RelPermalink }}"></script>
+
+<div class="container">
+    <div class="intro">
+        <h1>こんにちは、 エリクです</h1>
+        <div class="description-text-group">
+            <span class="description-text" id="description-text-0">we~ウェ|bu~ブ|kai~開|hatsu~発|sha~者|de~で|su~す|。~。|</span>
+            <span class="description-text" id="description-text-1">we~ウェ|bu~ブ|de~デ|za~ザ|i~イ|na~ナ|-~ー|de~で|su~す|。~。|</span>
+            <span class="description-text" id="description-text-2">pu~プ|ro~ロ|gu~グ|ra~ラ|ma~マ|-~ー|de~で|su~す|。~。|</span>
+            <span class="description-text" id="description-text-3">a~ア|-~ー|ti~ティ|su~ス|to~ト|shi~志|bou~望|de~で|su~す|。~。|</span>
+            <span class="description-text" id="description-text-4">on~音|gaku~楽|ai~愛|kou~好|ka~家|de~で|su~す|。~。|</span>
+        </div>
+        <div class="description">
+            <span>僕は </span><span class="animated-text"></span>
+        </div>
+        <div class="buttons">
+            <a href="/ko/about/" class="more-button">僕にもっとついて</a>
+            <div class="social-buttons">
+                {{ range .Site.Params.socials }}
+                <a href="{{ .url }}" target="_blank"><img src="{{ .icon }}" alt="{{ .name }}"></a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    <div class="photo"></div>
+</div>
+{{ end }}
