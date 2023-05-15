@@ -1,7 +1,7 @@
 ---
 title: "포트폴리오 웹사이트 (구)"
 date: 2020-03-29T16:00:00-04:00
-intro: "2020년에 만든 나에 전 포트폴리오 웹사이트."
+intro: "2020년에 만든 나의 10학년 포트폴리오 웹사이트."
 description: "웹사이트"
 tags: ["HTML5", "CSS", "Javascript", "프론트엔드", "ICS"]
 archived: true

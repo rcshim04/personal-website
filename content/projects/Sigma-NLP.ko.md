@@ -1,7 +1,7 @@
 ---
 title: "Sigma NLP"
 date: 2020-08-24T09:00:00-04:00
-intro: "IgnitionHacks 2020해커톤에 제출된 정확하고 간소화된 신경망 기반 감정 분석기. 전체 3위."
+intro: "IgnitionHacks 2020 해커톤에 제출된 정확하고 간소화된 신경망 기반 감정 분석기. 전체 3위."
 description: "신경망"
 tags: ["Python3", "Tensorflow", "정규 표현식", "기계 학습", "헤커톤"]
 archived: false

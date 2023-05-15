@@ -1,5 +1,5 @@
 ---
-title: "애트리스 (Amoris)"
+title: "愛트리스 (Amoris)"
 date: 2022-02-05T12:30:00-05:00
 intro: "p5.js으로 만든 테트리스의 발렌타인 테마 패러디."
 description: "온라인 게임"

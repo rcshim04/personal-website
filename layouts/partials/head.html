@@ -30,7 +30,8 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
     {{ $theme := resources.Get "scripts/theme.js" }}
     {{ $mobile_nav := resources.Get "scripts/mobile-nav.js" }}
-    {{ $js := slice $theme $mobile_nav | resources.Concat "js/bundle.js" | minify | fingerprint | resources.PostProcess }}
+    {{ $language := resources.Get "scripts/language.js" }}
+    {{ $js := slice $theme $mobile_nav $language | resources.Concat "js/bundle.js" | minify | fingerprint | resources.PostProcess }}
     <script src="{{ $js.RelPermalink }}"></script>
     
 </head>

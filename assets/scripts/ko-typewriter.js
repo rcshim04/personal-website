@@ -14,7 +14,6 @@ $(document).ready(() => {
             } else {
                 temp = description[j];
             }
-            console.log(j, description.length);
             $(".description > .animated-text").text(text + temp + "│");
             if(tick % 2 == 0) {
                 j++;

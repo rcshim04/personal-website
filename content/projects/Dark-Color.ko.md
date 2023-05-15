@@ -1,7 +1,7 @@
 ---
 title: "다크 모드 색상"
 date: 2022-04-01T16:30:00-04:00
-intro: "색상을 다크 모드에 상응으로 변환하는 사이트입니다."
+intro: "다크모드에 적합한  색상으로 바뀌주는 사이트입니다."
 description: "컨셉 웹사이트"
 tags: ["HTML5", "CSS", "jQuery", "프론트엔드"]
 archived: false

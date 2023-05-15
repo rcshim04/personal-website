@@ -1,7 +1,7 @@
 ---
 title: "개인 웹사이트"
 date: 2023-02-11T16:00:00-05:00
-intro: "나에 개인 포트폴리오 웹사이트. Hugo로 사랑스럽게 만들었습니다."
+intro: "나의 개인 포트폴리오 웹사이트. Hugo로 사랑스럽게 만들었습니다."
 description: "웹사이트"
 tags: ["HTML5", "SCSS", "jQuery", "Hugo", "프론트엔드", "웹 디자인"]
 archived: false

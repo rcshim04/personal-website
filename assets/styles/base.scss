@@ -107,6 +107,38 @@ header {
                     box-shadow: inset 0 -2px 0 var(--primary-color);
                 }
             }
+            .lang-switch {
+                display: flex;
+                position: relative;
+                height: 2rem;
+                margin-bottom: .4rem;
+                cursor: pointer;
+                border-radius: 1rem;
+                background-color: var(--secondary-bg-color);
+                overflow: hidden;
+                font-weight: 500;
+                .lang-input {
+                    display: none;
+                }
+                .lang-label {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 2.4rem;
+                    cursor: pointer;
+                    z-index: 5;
+                }
+                .lang-slider {
+                    display: block;
+                    position: absolute;
+                    width: 2.4rem;
+                    height: 2rem;
+                    top: 0;
+                    background-color: var(--primary-color);
+                    border-radius: 1rem;
+                    transition: left 0.2s ease;
+                }
+            }
         }
         .mobile-toggle {
             display: none;

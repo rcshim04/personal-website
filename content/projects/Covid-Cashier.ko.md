@@ -1,5 +1,5 @@
 ---
-title: "코로나 캐셔 (Covid Cashier)"
+title: "코로나 캐셔"
 date: 2020-05-22T12:00:00-04:00
 intro: "코로나 안전 절차를 기반으로 하는 게임입니다."
 description: "비디오 게임"

@@ -11,6 +11,18 @@ defaultContentLanguage = 'en'
     [languages.en.menu]
     [languages.en.params]
         close_words = ['Cool!', 'Great!', 'Okay!', 'Awesome!', 'Wow!', 'Got it!']
+        [languages.en.params.missing]
+            oops = "Oops!"
+            error = "404 - Page Not Found"
+            message = "The page you are looking for may have been removed, had its name changed, or is temporary unavailable."
+        [languages.en.params.mobilemenu]
+            lang = "Site Language"
+            back = "Back to Menu"
+            [languages.en.params.mobilemenu.theme]
+                displaymode = "Display Mode"
+                system = "System"
+                light = "Light Mode"
+                dark = "Dark Mode"
 [[languages.en.menu.links]]
     name = 'About'
     url = '/about/'
@@ -28,8 +40,20 @@ defaultContentLanguage = 'en'
     [languages.ko.menu]
     [languages.ko.params]
         close_words = ['좋아요!', '대박!', '오케이!', '멋지다!', '와우!', '알겠어요!']
+        [languages.ko.params.missing]
+            oops = "이런!"
+            error = "404 - 페이지를 찾을 수 없습니다."
+            message = "찾고 있는 페이지가 제거되었거나 이름이 변경되었거나 일시적으로 사용할 수 없게 되었을 수 있습니다."
+        [languages.ko.params.mobilemenu]
+            lang = "사이트 언어"
+            back = "전메뉴로 돌아가기"
+            [languages.ko.params.mobilemenu.theme]
+                displaymode = "테마 설정"
+                system = "시스템"
+                light = "밝게"
+                dark = "어둡게"
 [[languages.ko.menu.links]]
-    name = '나에 대해'
+    name = '나에 대하여'
     url = '/ko/about/'
     weight = 10
 [[languages.ko.menu.links]]
@@ -37,22 +61,35 @@ defaultContentLanguage = 'en'
     url = '/ko/projects/'
     weight = 20
 
-    [languages.ja]
-        languageCode = 'ja'
-        languageName = '日本語'
-        title = 'シム・エリク'
-        weight = 3
-    [languages.ja.menu]
-    [languages.ja.params]
-        close_words = ['いいね！', 'すごい！', 'オーケー！', 'さいこうだ！', 'わあ！', 'わかった！']
-[[languages.ja.menu.links]]
-    name = '僕について'
-    url = '/ja/about/'
-    weight = 10
-[[languages.ja.menu.links]]
-    name = 'プロジェクト'
-    url = '/ja/projects/'
-    weight = 20
+#     [languages.ja]
+#         languageCode = 'ja'
+#         languageName = '日本語'
+#         title = 'シム・エリク'
+#         weight = 3
+#     [languages.ja.menu]
+#     [languages.ja.params]
+#         close_words = ['いいね！', 'すごい！', 'オーケー！', 'さいこうだ！', 'わあ！', 'わかった！']
+#     [languages.ja.missing]
+#         oops = "あれ？"
+#         error = "404 - ページが見つかりません。"
+#         message = "お探しのページは削除されたか、名前が変更されたか、一時的に利用できなくなっている可能性があります。" 
+#     [languages.ja.params.mobilemenu]
+#         [languages.ja.params.mobilemenu.theme]
+#             displaymode = "テーマ設定"
+#             system = "システム"
+#             light = "明るく"
+#             dark = "暗く"
+#         lang = "サイト言語"
+#         back = "前のメニューに戻る"
+# [[languages.ja.menu.links]]
+#     name = '僕について'
+#     url = '/ja/about/'
+#     weight = 10
+# [[languages.ja.menu.links]]
+#     name = 'プロジェクト'
+#     url = '/ja/projects/'
+#     weight = 20
+
 
 # [[menu.links]]
 #     name = 'Blog'

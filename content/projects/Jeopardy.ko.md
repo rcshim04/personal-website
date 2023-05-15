@@ -1,7 +1,7 @@
 ---
 title: "제퍼디"
 date: 2020-01-14T15:05:00-05:00
-intro: "Java로 만든 인기 TV 프로그램인 Jeopardy!를 각색한 게임입니다."
+intro: "Java로 만든 인기 TV 프로그램인 제퍼디!를 각색한 게임입니다."
 description: "비디오 게임"
 tags: ["Java", "Ready To Program", "게임 개발", "ICS"]
 archived: true
